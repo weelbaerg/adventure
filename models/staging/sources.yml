@@ -1,0 +1,94 @@
+version: 2
+
+sources:
+  - name: adventure
+    tables:
+      - name: sales_salesorderheader
+        descripton: Essa é a tabela de pedidos
+        columns:
+          - name: salesorderid
+            description: Id do Pedido
+            tests:
+              - unique
+              - not_null
+
+      - name: sales_salesorderdetail
+        descripton: Essa é a tabela de detalhes de pedidos
+        columns:
+          - name: salesorderdetailid
+            description: Id do Pedido
+            tests:
+              - unique
+              - not_null
+
+      - name: sales_creditcard
+        descripton: Essa é a tabela de cartão de crédito
+        columns:
+          - name: creditcardid
+            description: Id do Cartão de Crédito
+            tests:
+              - unique
+              - not_null
+
+      - name: sales_salesreason
+        descripton: Essa é a tabela de razão das vendas
+        columns:
+          - name: salesreasonid
+            description: Id da Razão de Vendas
+            tests:
+              - unique
+              - not_null
+
+      - name: sales_salesterritory
+        descripton: Essa é a tabela de vendas no território
+        columns:
+          - name: territoryid
+            description: Id do Território
+            tests:
+              - unique
+              - not_null
+
+      - name: person_address
+        descripton: Essa é a tabela de endereço das pessoas
+        columns:
+          - name: addressid
+            description: Id do Endereço
+            tests:
+              - unique
+              - not_null
+
+      - name: sales_customer
+        descripton: Essa é a tabela de clientes
+        columns:
+          - name: customerid
+            description: Id do Cliente
+            tests:
+              - unique
+              - not_null
+              
+      - name: person_person
+        descripton: Essa é a tabela de pessoas
+        columns:
+          - name: businessentityid
+            description: Id das Pessoas
+            tests:
+              - unique
+              - not_null
+
+      - name: product
+        descripton: Essa é a tabela de produtos
+        columns:
+          - name: productid
+            description: Id do Produto
+            tests:
+              - unique
+              - not_null
+      
+      - name: sales_salesorderheadersalesreason
+        descripton: Essa é a tabela concatenada de Razão de Vendas e Pedidos
+        columns:
+          - name: salesreasonid
+            description: i
+            tests:
+              - unique
+              - not_null

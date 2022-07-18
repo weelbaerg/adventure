@@ -1,0 +1,75 @@
+version: 2
+
+models:
+
+    - name: fact_sales
+      description: "Tabela de Fatos de Vendas"
+      columns:
+          - name: salesorderid
+            description: "A chave primária original da tabela"
+            tests:
+                - unique
+                - not_null
+    
+    - name: dim_person_address
+      description: "Dimensão do Endereço das Pessoas"
+      columns:
+          - name: addressid
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: dim_product
+      description: "Dimensão do Produto"
+      columns:
+          - name: productid
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: dim_sales_creditcard
+      description: "Dimensão do Cartão de Crédito"
+      columns:
+          - name: creditcardid
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: dim_sales_customer
+      description: "Dimensão dos Clientes"
+      columns:
+          - name: customerid
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    
+    - name: dim_sales_salesorderdetail
+      description: "Dimensão de Detalhe do Pedido"
+      columns:
+          - name: salesorderdetailid
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: dim_sales_salesreason
+      description: "Dimensão da Razão de Venda"
+      columns:
+          - name: salesreasonid
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    
+    - name: dim_sales_salesterritory
+      description: "Dimensão das Vendas por Território"
+      columns:
+          - name: territoryid
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
